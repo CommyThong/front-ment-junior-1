@@ -16,7 +16,17 @@
       <a class="logo-container" href="index.html">
        <img src="images/logo.svg">
       </a>
-      <a href="index.html">Features</a>
+      <div class="features-container">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Features</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html"><img src="images/icon-todo.svg">Todo List</a>
+            <a href="index.html"><img src="images/icon-calendar.svg">Calendar</a>
+            <a href="index.html"><img src="images/icon-reminders.svg">Reminders</a>
+            <a href="index.html"><img src="images/icon-planning.svg">Planning</a>
+          </div>
+        </div>
+      </div>
       <a href="index.html">Company</a>
       <a href="index.html">Careers</a>
       <a href="index.html">About</a>
@@ -63,3 +73,25 @@
   </div> -->
 </body>
 </html>
+
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
