@@ -17,17 +17,22 @@
        <img src="images/logo.svg">
       </a>
       <div class="features-container">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Features</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="index.html"><img src="images/icon-todo.svg">Todo List</a>
-            <a href="index.html"><img src="images/icon-calendar.svg">Calendar</a>
-            <a href="index.html"><img src="images/icon-reminders.svg">Reminders</a>
-            <a href="index.html"><img src="images/icon-planning.svg">Planning</a>
-          </div>
+        <button>Features</button>
+        <div class="features-dropdown">
+          <a href="index.html"><img src="images/icon-todo.svg">Todo List</a>
+          <a href="index.html"><img src="images/icon-calendar.svg">Calendar</a>
+          <a href="index.html"><img src="images/icon-reminders.svg">Reminders</a>
+          <a href="index.html"><img src="images/icon-planning.svg">Planning</a>
         </div>
       </div>
-      <a href="index.html">Company</a>
+      <div class="company-container">
+        <button>Company</button>
+        <div class="company-dropdown">
+          <a href="index.html">History</a>
+          <a href="index.html">Our Team</a>
+          <a href="index.html">Blog</a>
+        </div>
+      </div>
       <a href="index.html">Careers</a>
       <a href="index.html">About</a>
     </nav>
@@ -49,7 +54,7 @@
         <a href="index.html">
           <img src="images/client-databiz.svg">
         </a>
-        <a href="index.html">
+        <a class="audiophile" href="index.html">
           <img src="images/client-audiophile.svg">
         </a>
         <a href="index.html">
@@ -73,25 +78,3 @@
   </div> -->
 </body>
 </html>
-
-<script>
-  /* When the user clicks on the button, 
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-  </script>
