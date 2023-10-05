@@ -7,7 +7,7 @@
   * {
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   body {
@@ -250,7 +250,7 @@
     border: 2px solid black;
   }
 
-  .hamburger {
+  .hamburger, .hamburger-dropdown, .hamburger-img-close, .hamburger-container {
     display: none;
   }
 
@@ -400,7 +400,7 @@
       width: 100%;
       min-height: 5rem;
       font-size: 1.1em;
-      padding: 0rem 1rem 0 1rem;
+      padding: 0rem 1.2rem 0 1.2rem;
     }
   
     .logo-container {
@@ -417,11 +417,160 @@
       width: fit-content;
     }
 
+    .hamburger-container {
+      width: fit-content;
+      margin: 0;
+      position: relative;
+      display: inline-block;
+      /* padding-bottom: 2em; */
+    }
+  
+    .hamburger-container:hover .hamburger-dropdown, .hamburger-dropdown a,
+     .hamburger-container .features-container, .hamburger-container .company-container, .hamburger-container,
+      .hamburger-container .hamburger-dropdown a, .hamburger-container .ham-login-register a, .ham-login-register, .hamburger-container .ham-login-register button {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .hamburger {
-      display: inline;
+      /* padding: 16px; */
+      /* font-size: 16px; */
       border: none;
+      cursor: pointer;
+      color: hsl(0, 0%, 41%);
+      /* padding: 1em 0 1em 0; */
+      /* width: 5rem; */
+      font-size: 1.2em;
+      display: inline;
       width: fit-content;
       padding: 0;
+    }
+  
+    .hamburger-container:hover .hamburger {
+      color: black;
+      border: none;
+    }
+    
+    .hamburger-dropdown {
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      background-color: white;
+      width: 15rem;
+      min-width: 10rem;
+      height: 48rem;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      right: 0;
+      margin-right: -3px;
+      /* margin-top: 1rem; */
+      border-radius: 0px;
+      font-size: 1.29em;
+      padding: 1em 0 1em 0;
+      right: -16px;
+      top: -29px;
+    }
+
+    .hamburger-container .features-container button, .hamburger-container .company-container button {
+      padding: 0;
+    }
+    
+    .hamburger-dropdown a {
+      color: hsl(0, 0%, 41%);
+      padding: 0.3em 0 0.3em 1em;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .hamburger-dropdown .features-dropdown, .hamburger-dropdown .company-dropdown {
+      position: relative;
+    }
+
+    .hamburger-dropdown a {
+      font-size: 0.97em;
+      margin-left: 0.6em;
+      padding-top: 1em;
+    }
+
+    .hamburger-dropdown .features-container {
+      margin: 1.6em 0 0 1.9em;
+      font-size: 0.81em;
+      /* padding-right: 1.5em; */
+    }
+
+    .hamburger-dropdown .features-container button {
+      /* margin-left: -20px; */
+      background-position: 5.4em 0.5em;
+      width: 7rem;
+      background-color: white;
+    }
+
+    .hamburger-dropdown .features-dropdown {
+      width: 13rem;
+      box-shadow: none;
+    }
+
+    .hamburger-dropdown .features-dropdown a {
+      display: flex;
+      flex-direction: row;
+      padding: 0.5em 0.5em;
+    }
+
+    .hamburger-dropdown .features-dropdown img {
+      width: 2.5rem;
+      margin-left: -4px;
+    }
+
+    .hamburger-dropdown .company-container {
+      margin: 1.2em 0 0 1.9em;
+      font-size: 0.81em;
+      padding-right: 1.5em;
+    }
+
+    .hamburger-dropdown .company-container button {
+      /* margin-left: -20px; */
+      background-position: 5.4em 0.5em;
+      width: 7rem;
+      background-color: white;
+    }
+
+    .hamburger-dropdown .company-dropdown {
+      box-shadow: none;
+      padding: 1em 0 0.5em 0;
+    }
+
+    .hamburger-dropdown .company-dropdown a {
+      padding: 0.4em 0.4em;
+    }
+
+    .hamburger-img-close {
+      display: flex;
+      justify-self: flex-end;
+      align-self: flex-end;
+      margin: 0.4em 0.8em;
+      padding-right: 0.33em;
+    }
+
+    .ham-login-register {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      margin: 0;
+    }
+
+    .ham-login-register a {
+      margin-top: 0.5em;
+    }
+
+    .ham-login-register button {
+      padding: 0.65em 5em 0.65em 5em;
+      margin-top: 0.8em;
+      background-color: white;
     }
 
     main {
