@@ -41,6 +41,10 @@
     isolation: isolate;
   }
 
+  ::selection {
+    background: gold;
+  }
+
   a {
     text-decoration: none;
   }
@@ -261,7 +265,7 @@
     /* align-items: center; */
     max-width: 70rem;
     width: 100%;
-    height: 43.5rem;
+    height: fit-content;
     /* padding-top: 2.5em; */
     /* padding: 3rem 2rem 0 2rem; */
   }
@@ -304,6 +308,7 @@
     line-height: 1.5;
     letter-spacing: 0.1px;
     padding-right: 1.5rem;
+    padding-bottom: 0.4em;
   }
 
   article button {
@@ -327,6 +332,7 @@
     align-items: flex-end;
     width: 30rem;
     padding-top: 2.5rem;
+    padding-right: 8em;
   }
 
   footer a {
@@ -362,17 +368,19 @@
   .attribution {
     font-weight: 100;
     display: flex;
-    flex: 1;
-    align-items: flex-end;
+    /* align-items: flex-end; */
+    padding-top: 3em;
   }
 
   .attribution a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
+    padding-left: 0.4em;
   }
 
   .attribution a:hover {
     color: blueviolet;
+    text-decoration: none;
   }
 
   @media (max-width: 48em) {
@@ -589,7 +597,7 @@
       /* align-items: center; */
       max-width: 100%;
       width: 100%;
-      height: 100%;
+      height: fit-content;
       padding: 0;
     }
   
@@ -619,7 +627,7 @@
       line-height: 0.9;
       padding-top: 0rem;
       text-align: center;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     article > h1 {
@@ -657,6 +665,7 @@
       height: 3.2rem;
       max-height: 100%;
       padding-top: 1.5rem;
+      padding-right: 0;
     }
   
     footer a {
@@ -692,5 +701,20 @@
 
     .attribution {
       font-size: 0.8rem;
+      display: flex;
+      justify-self: flex-start;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex: 0;
+    }
+  }
+
+  @media (max-width: 15.5em) {
+    article {
+      padding-top: 3.3rem;
+    }
+
+    article h1 {
+      padding-bottom: 0.2em;
     }
   }
